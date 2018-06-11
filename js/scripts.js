@@ -1,5 +1,7 @@
-function toDoList(task, instruction) {
+function toDoList(task, instruction, date) {
   this.task = task;
+  this.task = instruction;
+  this.task = date;
 }
 
 $(document).ready(function() {
@@ -8,8 +10,9 @@ $(document).ready(function() {
 
     var inputtedTask= $("input#new-task").val();
     var inputtedInstruction = $("input#new-instruction").val();
+    var inputtedDate = $("#date").val();
 
-    var newTask = new toDoList(inputtedTask, inputtedInstruction);
+    var newTask = new toDoList(inputtedTask, inputtedInstruction, inputtedDate);
 
     $("ul#task-list").append("<li><span class='toDo'>" + newTask.task + "</span></li>");
 
