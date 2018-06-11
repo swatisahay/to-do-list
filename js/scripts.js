@@ -1,6 +1,5 @@
 function toDoList(task, instruction) {
   this.task = task;
-  this.instruction = instruction;
 }
 
 $(document).ready(function() {
