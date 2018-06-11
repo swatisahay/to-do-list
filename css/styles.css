@@ -1,4 +1,4 @@
-#show-tasks {
+#complete-instruction {
   display: none;
 }
 
@@ -32,4 +32,5 @@ li {
 
 .form-group {
   font-size: 25px;
+  width: 40%;
 }
