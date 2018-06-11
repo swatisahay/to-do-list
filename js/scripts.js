@@ -13,19 +13,24 @@ $(document).ready(function() {
     var newTask = new toDoList(inputtedTask, inputtedInstruction);
 
     $("ul#task-list").append("<li><span class='toDo'>" + newTask.task + "</span></li>");
-    $("li").last().click(function(){
-      $("li").remove();
-    });
 
     $(".toDo").last().click(function() {
-    $("#show-tasks").show();
-    $("#show-tasks h2").text(newTask.task);
-    $(".task").text(newTask.task);
-    $(".instruction").text(newTask.instruction);
+    $("#completed-list").show();
+    // $("#completed-list").text(newTask.task);
+    $("ul#completed-list").append("<li><span class='toDo'>" + newTask.task + "</span></li>");
+      $("li").last().click(function() {
+        $(this).remove();
+    });
   });
 
     $("input#new-task").val("");
     $("input#new-instruction").val("");
 
+
+    $("li#completed-list").last().click(function(){
+      $(this).remove();
+
+
   });
+});
 });
