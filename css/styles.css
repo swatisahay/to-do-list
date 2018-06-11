@@ -11,6 +11,16 @@
   text-decoration: underline;
 }
 
+#complete-instruction {
+  cursor: pointer;
+  color: #0088cc;
+}
+
+#complete-instruction:hover {
+  text-decoration: underline;
+}
+
+
 h1 {
   text-align: center;
   font-size: 55px;

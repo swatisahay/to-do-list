@@ -16,19 +16,30 @@ $(document).ready(function() {
 
     var newTask = new toDoList(inputtedTask, inputtedInstruction, inputtedDate);
 
-    $("ul#task-list").append("<li><span class='toDo'>" + newTask.task+ "</span></li>");
+    $("ul#task-list").append("<li><span class='toDo'>" + newTask.task+ "</span>| <a class='delete'>Delete this task</a></li>");
+
+    $(".delete").last().click(function() {
+     $(this).parent().remove();
+     if ($("#complete-instruction h3").text() == newTask.task) {
+       $("#complete-instruction").hide();
+     }
+   });
 
     $(".toDo").last().click(function() {
       $("#complete-instruction").show();
-      $("ul#completed-list").append("<li><span class='toDo'>" + newTask.tasks() + "</span></li>");
-      $("li").last().click(function() {
-        $(this).remove();
-      });
+      $("#complete-instruction h3").text(newTask.task);
+      $(".task").text(newTask.task);
+      $(".instruction").text(newTask.instruction);
+      $(".date").text(newTask.date);
 
+      // $("ul#completed-list").append("<li><span class='toDo'>" + newTask.tasks() + "</span></li>");
     });
-    $("li").last().click(function() {
-      $(this).remove();
-    });
+    //   $("ul").last().click(function() {
+    //     $(this).remove();
+    // });
+    // $("li").last().click(function() {
+    //   $(this).remove();
+    // });
 
     $("input#new-task").val("");
     $("input#new-instruction").val("");
