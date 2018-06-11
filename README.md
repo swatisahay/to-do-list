@@ -16,10 +16,10 @@ _A website with tool to create a to-do list. Once the task is completed, click "
 
 ## Spec
 
-_Collect input task information for to-do list_  
-_Store the information in a task name_  
-_Click the task name to display the instruction_  
-_Once completed, click the button next to the task to remove it from the list_
+_Collect input task information_  
+_Store the information in to-do list_  
+_Click on the task name to indicate completion and move to completed list_  
+_Click the task in completed list to remove it from the list_
 
 ## Support and contact details
 
