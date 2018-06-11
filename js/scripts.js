@@ -15,22 +15,20 @@ $(document).ready(function() {
     $("ul#task-list").append("<li><span class='toDo'>" + newTask.task + "</span></li>");
 
     $(".toDo").last().click(function() {
-    $("#completed-list").show();
-    // $("#completed-list").text(newTask.task);
-    $("ul#completed-list").append("<li><span class='toDo'>" + newTask.task + "</span></li>");
+      $("#completed-list").show();
+      // $("#completed-list").text(newTask.task);
+      $("ul#completed-list").append("<li><span class='toDo'>" + newTask.task + "</span></li>");
+      $("li").last().click(function() {
+        $(this).remove();
+      });
+      
+    });
     $("li").last().click(function() {
       $(this).remove();
-  });
-
-  });
-  $("li").last().click(function() {
-    $(this).remove();
-});
+    });
 
     $("input#new-task").val("");
     $("input#new-instruction").val("");
 
-
-
-});
+  });
 });
