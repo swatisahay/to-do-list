@@ -10,3 +10,26 @@
 .toDo:hover {
   text-decoration: underline;
 }
+
+h1 {
+  text-align: center;
+  font-size: 55px;
+}
+
+h2 {
+  text-decoration: underline;
+}
+
+body {
+  background-image: url(../img/bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+li {
+  font-size: 25px;
+}
+
+.form-group {
+  font-size: 25px;
+}

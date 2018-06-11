@@ -16,12 +16,11 @@ $(document).ready(function() {
 
     $(".toDo").last().click(function() {
       $("#completed-list").show();
-      // $("#completed-list").text(newTask.task);
       $("ul#completed-list").append("<li><span class='toDo'>" + newTask.task + "</span></li>");
       $("li").last().click(function() {
         $(this).remove();
       });
-      
+
     });
     $("li").last().click(function() {
       $(this).remove();
